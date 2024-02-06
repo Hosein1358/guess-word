@@ -1,0 +1,108 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess The Word</title>
+    <style>
+        .column {
+            width: 40%;
+            padding: 10px;
+        }
+
+        .description {
+            margin-left: -8px;
+            margin-top: 30px;
+            border-style: solid none solid none;
+            border-width: 7px;
+            border-color: #2914e9;
+            background-color: white;
+            padding: 10px;
+
+        }
+
+        table,
+        th,
+        td {
+            border: 2px solid black;
+            border-collapse: collapse;
+            border-color: #2914e9;
+            text-align: center;
+            border-width: 3px;
+        }
+
+        .buttonStart {
+            background-color: magenta;
+            border-width: 3px;
+            border-color: blue;
+            color: white;
+            height: 40px;
+            margin-right: 20px;
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+<body style="background-color: rgb(239, 177, 233); ">
+    <div class="description" style="width: 100%; ">
+        <h3>Welcome to the Game <span style="color:rgb(7, 7, 126) ;">GUESS THE WORD</span></h3>
+        <ul>
+            <li>You should find the word by gussing the letters (A~Z)</li>
+            <li>If the letter is correct it puts in the correct place</li>
+            <li>You will have 7 <a style="color:red ;">Hearts </a>to find each word</li>
+            <li>By gussing the wrong letter you loose one heart</li>
+            <li>Remained Hearts will be added to your Score</li>
+            <br>
+        </ul>
+        <h4>GOOD LUCK</h4>
+
+    </div>
+    <br><br>
+    <div class="game">
+        <span id="enterName">Enter Your Name: </span>
+        <input id="name" type="text" style="border-color:#2914e9 ;border-width: 3px;"><span id="playerName"></span><br><br>
+        <input type="checkbox" id="checkFirstLetter" name="checkBoxFirstLetter" value="easy" >
+        <label for="checkBoxFirstLetter" id="lablCFL">Show First Letter (Easy Mode)</label>
+        <br><br>
+        <button type="button" class="buttonStart">Submit</button>
+    </div>
+    <br><br>
+    <div id="w1" class="word">
+        <br>
+    </div>
+    <br><br>
+    <div id="r1" class="result">
+        <table style="width: 40%;">
+            <tr style="height:20px ; background-color: white;">
+                <th style="width:30% ;color: blue;background-color: white">Number of Matches</th>
+                <th style="width:40% ;color:blue; background-color:white;">Wrong Letters</th>
+                <th style="color: blue;background-color:white;">Hearts
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-heart-fill"
+                        viewBox="0 0 16 14">
+                        <path fill-rule="evenodd"
+                            d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                    </svg>
+                </th>
+                <th style="color: blue; background-color: white;">Total Score</th>
+            </tr>
+            <tr style="background-color: white;">
+                <td id="numberOfMatches"></td>
+                <td id="trirdLetters" style="height:30px ;"></td>
+                <td id="heartsNumbers"></td>
+                <td id="totalScore"></td>
+            </tr>
+
+        </table>
+        <div id="showCorrectword">
+            <h3 id="correctWord"></h3>
+            <!--<p id="meaning">Click <a href=https://www.ldoceonline.com/dictionary/elite target="_blank">Here </a>To Find the Meaning</p>
+            <p id="meaning"></p>-->
+
+        </div>
+    </div>
+
+</body>
+<script src="script-gwE.js"></script>
+
+</html>
